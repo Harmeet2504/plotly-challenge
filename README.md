@@ -1,6 +1,4 @@
-# Plot.ly Homework - Belly Button Biodiversity
-
-
+# Plot.ly Challenge - Belly Button Biodiversity
 
 An interactive dashboard is built to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/) using plotly.js and the app is deployed on heroku.
 
