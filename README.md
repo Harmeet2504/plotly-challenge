@@ -1,91 +1,46 @@
 # Plot.ly Homework - Belly Button Biodiversity
 
-![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
 
-### Before You Begin
-
-1. Create a new repository for this project called `plotly-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Inside your local git repository, create a directory for the Plotly challenge. Use the folder name to correspond to the challenge: **Belly_Button_Diversity**.
-
-4. This is a full stack app so add your html, js, css, python and sqlite files.
-
-5. Push the above changes to GitHub or GitLab.
+An interactive dashboard is built to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/) using plotly.js and the app is deployed on heroku.
 
 ## Step 1 - Plotly.js
 
-Use Plotly.js to build interactive charts for your dashboard.
+ Plotly.js is used to build interactive charts for the dashboard.
 
-* Create a PIE chart that uses data from your samples route (`/samples/<sample>`) to display the top 10 samples.
+*  A PIE chart is created that uses data from samples route (`/samples/<sample>`) to display the top 10 samples.
 
-  * Use `sample_values` as the values for the PIE chart.
+  * `sample_values`is used as the values for the PIE chart.
 
-  * Use `otu_ids` as the labels for the pie chart.
+  *  `otu_ids`is used as the labels for the pie chart.
 
-  * Use `otu_labels` as the hovertext for the chart.
+  *  `otu_labels`is used as the hovertext for the chart.
 
-  ![PIE Chart](Images/pie_chart.png)
+* A Bubble Chart is created that uses data from samples route (`/samples/<sample>`) to display each sample.
 
-* Create a Bubble Chart that uses data from your samples route (`/samples/<sample>`) to display each sample.
+  * `otu_ids`is used for the x values.
 
-  * Use `otu_ids` for the x values.
+  *  `sample_values` is used for the y values.
 
-  * Use `sample_values` for the y values.
+  *  `sample_values`is used for the marker size.
 
-  * Use `sample_values` for the marker size.
+  *  `otu_ids`is used for the marker colors.
 
-  * Use `otu_ids` for the marker colors.
+  * `otu_labels`is used for the text values.
 
-  * Use `otu_labels` for the text values.
 
-  ![Bubble Chart](Images/bubble_chart.png)
+* The sample metadata is displayed from the route `/metadata/<sample>`
 
-* Display the sample metadata from the route `/metadata/<sample>`
+  * Each key/value pair is displayed from the metadata JSON object somewhere on the page.
 
-  * Display each key/value pair from the metadata JSON object somewhere on the page.
+* All of the plots are updated any time that a new sample is selected.
 
-* Update all of the plots any time that a new sample is selected.
-
-* You are welcome to create any layout that you would like for your dashboard. An example dashboard page might look something like the following.
-
-![Example Dashboard Page](Images/dashboard_part1.png)
-![Example Dashboard Page](Images/dashboard_part2.png)
 
 ## Step 2 - Heroku
 
-Deploy your Flask app to Heroku.
+ Flask app is deployed to Heroku using sqlite file for the database.
 
-* You can use the provided sqlite file for the database.
 
-* Ask your Instructor and TAs for help!
-
-- - -
-
-## Advanced Challenge Assignment (Optional)
-
-The following task is completely optional and is very advanced.
-
-* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the Weekly Washing Frequency obtained from the `/metadata/<sample>`route.
-
-* You will need to modify the example gauge code to account for values ranging from 0 - 9.
-
-* Update the chart whenever a new sample is selected.
-
-![Weekly Washing Frequency Gauge](Images/gauge.png)
-
-- - -
-
-## Flask API
-
-Use Flask API starter code to serve the data needed for your plots.
-
-* Test your routes by visiting each one in the browser.
-
-- - -
 
 ## Hints
 
@@ -97,6 +52,3 @@ Use Flask API starter code to serve the data needed for your plots.
 
 - - -
 
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
